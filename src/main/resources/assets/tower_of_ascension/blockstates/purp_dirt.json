@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tower_of_ascension:block/purp_dirt"
+      },
+      {
+        "model": "tower_of_ascension:block/purp_dirt",
+        "y": 90
+      },
+      {
+        "model": "tower_of_ascension:block/purp_dirt",
+        "y": 180
+      },
+      {
+        "model": "tower_of_ascension:block/purp_dirt",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+"": [
+    {
+      "model": "tower_of_ascension:block/blue_grass_block"
+    },
+    {
+      "model": "tower_of_ascension:block/blue_grass_block",
+      "y": 90
+    },
+    {
+      "model": "tower_of_ascension:block/blue_grass_block",
+      "y": 180
+    },
+    {
+      "model": "tower_of_ascension:block/blue_grass_block",
+      "y": 270
+    }
+    ]
+  }
+}
