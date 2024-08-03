@@ -3,6 +3,7 @@ package com.ronoso.towerofascension.initialization;
 import com.ronoso.towerofascension.TowerOfAscension;
 import com.ronoso.towerofascension.blocks.BlueGrassBlock;
 import com.ronoso.towerofascension.blocks.PurpDirt;
+import com.ronoso.towerofascension.blocks.plants.MoonFlowerBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -26,6 +27,8 @@ public class BlockInit {
             BlueGrassBlock::new);
     public static final RegistryObject<Block> PURP_DIRT = BLOCKS.register("purp_dirt",
             PurpDirt::new);
+
+    public static final RegistryObject<Block> MOONFLOWER = BLOCKS.register("moonflower", MoonFlowerBlock::new);
 
     @SubscribeEvent
     public static void onRegisterItems(final RegisterEvent event) {
