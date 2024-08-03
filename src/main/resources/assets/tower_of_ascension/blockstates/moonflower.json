@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "tower_of_ascension:block/moonflower_bottom"
+    },
+    "half=upper": {
+      "model": "tower_of_ascension:block/moonflower_top"
+    }
+  }
+}
