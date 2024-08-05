@@ -1,0 +1,6 @@
+{
+  "parent": "item/moonflower",
+  "textures": {
+    "layer0": "tower_of_ascension:block/moonflower_top_front"
+  }
+}

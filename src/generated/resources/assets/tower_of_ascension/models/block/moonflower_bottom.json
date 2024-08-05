@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "tower_of_ascension:block/moonflower_bottom"
+  }
+}

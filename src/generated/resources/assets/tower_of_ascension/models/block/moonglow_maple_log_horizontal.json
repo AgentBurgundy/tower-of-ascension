@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "tower_of_ascension:block/moonglow_maple_log_top",
+    "side": "tower_of_ascension:block/moonglow_maple_log"
+  }
+}

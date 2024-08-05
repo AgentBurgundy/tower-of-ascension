@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "tower_of_ascension:blocks/plants/moonflower/moonflower_front"
-  }
-}
