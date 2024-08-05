@@ -1,6 +1,6 @@
 # Tower of Ascension
 
-![Tower of Ascension Logo]('./logo.webp')
+![Tower of Ascension Logo]('./logo.png')
 
 Tower of Ascension is an ambitious Minecraft mod that adds a 100-level challenge for players to conquer. Each level transports players to a unique dimension with its own biomes, mobs, and resources. Beat the boss of each level to advance to the next dimension and take on progressively tougher challenges.
 
