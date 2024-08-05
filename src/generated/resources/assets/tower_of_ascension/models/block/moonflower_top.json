@@ -1,0 +1,140 @@
+{
+  "parent": "tower_of_ascension:block/moonflower_top",
+  "elements": [
+    {
+      "faces": {
+        "north": {
+          "texture": "#cross",
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#cross",
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        0.8,
+        0,
+        8
+      ],
+      "rotation": {
+        "angle": 45.0,
+        "axis": "y",
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "rescale": true
+      },
+      "shade": false,
+      "to": [
+        15.2,
+        8,
+        8
+      ]
+    },
+    {
+      "faces": {
+        "east": {
+          "texture": "#cross",
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#cross",
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        8,
+        0,
+        0.8
+      ],
+      "rotation": {
+        "angle": 45.0,
+        "axis": "y",
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "rescale": true
+      },
+      "shade": false,
+      "to": [
+        8,
+        8,
+        15.2
+      ]
+    },
+    {
+      "faces": {
+        "east": {
+          "texture": "#front",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#back",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        9.6,
+        -1,
+        1
+      ],
+      "rotation": {
+        "angle": 22.5,
+        "axis": "y",
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "rescale": true
+      },
+      "shade": false,
+      "to": [
+        9.6,
+        15,
+        15
+      ]
+    }
+  ],
+  "textures": {
+    "back": "tower_of_ascension:block/moonflower_top_back",
+    "cross": "tower_of_ascension:block/moonflower_top",
+    "front": "tower_of_ascension:block/moonflower_top_front",
+    "particle": "tower_of_ascension:block/moonflower_top_front"
+  }
+}

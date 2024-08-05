@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tower_of_ascension:block/purp_dirt"
+  }
+}

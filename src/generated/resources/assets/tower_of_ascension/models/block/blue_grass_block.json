@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "tower_of_ascension:block/purp_dirt",
+    "side": "tower_of_ascension:block/blue_grass_block_side",
+    "top": "tower_of_ascension:block/blue_grass_block_top"
+  }
+}

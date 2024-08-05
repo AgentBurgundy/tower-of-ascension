@@ -3,11 +3,12 @@ package com.ronoso.towerofascension.initialization;
 import com.ronoso.towerofascension.TowerOfAscension;
 import com.ronoso.towerofascension.blocks.BlueGrassBlock;
 import com.ronoso.towerofascension.blocks.PurpDirt;
-import com.ronoso.towerofascension.blocks.plants.MoonFlowerBlock;
+import com.ronoso.towerofascension.blocks.plants.*;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,6 +30,10 @@ public class BlockInit {
             PurpDirt::new);
 
     public static final RegistryObject<Block> MOONFLOWER = BLOCKS.register("moonflower", MoonFlowerBlock::new);
+
+    // Moonglow Maple
+    public static final RegistryObject<Block> MOONGLOW_MAPLE_LOG = BLOCKS.register("moonglow_maple_log", MoonglowMapleLog::new);
+    public static final RegistryObject<Block> MOONGLOW_MAPLE_LEAVES = BLOCKS.register("moonglow_maple_leaves", MoonglowMapleLeaves::new);
 
     @SubscribeEvent
     public static void onRegisterItems(final RegisterEvent event) {
