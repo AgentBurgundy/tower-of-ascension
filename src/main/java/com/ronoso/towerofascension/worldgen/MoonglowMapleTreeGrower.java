@@ -1,4 +1,4 @@
-package com.ronoso.towerofascension.blocks.plants;
+package com.ronoso.towerofascension.worldgen;
 
 import net.minecraft.core.Holder;
 import net.minecraft.util.RandomSource;
@@ -10,7 +10,7 @@ public class MoonglowMapleTreeGrower extends AbstractTreeGrower {
 
     @Nullable
     @Override
-    protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean b) {
-        return null;
+    protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean pLargeHive) {
+        return ModConfiguredFeatures.MOONGLOW_MAPLE.getHolder().get();
     }
 }

@@ -3,6 +3,8 @@ package com.ronoso.towerofascension;
 import com.mojang.logging.LogUtils;
 import com.ronoso.towerofascension.initialization.BlockInit;
 import com.ronoso.towerofascension.initialization.ItemInit;
+import com.ronoso.towerofascension.worldgen.ModConfiguredFeatures;
+import com.ronoso.towerofascension.worldgen.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -37,6 +39,9 @@ public class TowerOfAscension
 
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
+
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

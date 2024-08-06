@@ -12,7 +12,15 @@ public class ModBlockLootTables extends BlockLoot {
     protected void addTables() {
         // Here is where we define loot tables. There's a fancy helper method to make some of these easier.
         this.dropSelf(BlockInit.MOONGLOW_MAPLE_LOG.get());
-        this.dropSelf(BlockInit.MOONGLOW_MAPLE_LEAVES.get()); // This probably doesn't make sense for leaves but fuck it for now...
+        this.dropSelf(BlockInit.MOONGLOW_MAPLE_WOOD.get());
+        this.dropSelf(BlockInit.MOONGLOW_MAPLE_PLANKS.get());
+        this.dropSelf(BlockInit.STRIPPED_MOONGLOW_MAPLE_WOOD.get());
+        this.dropSelf(BlockInit.STRIPPED_MOONGLOW_MAPLE_LOG.get());
+        this.dropSelf(BlockInit.MOONGLOW_MAPLE_SAPLING.get());
+
+        this.add(BlockInit.MOONGLOW_MAPLE_LEAVES.get(), (block) ->
+                createLeavesDrops(block, BlockInit.MOONGLOW_MAPLE_LEAVES.get(), 0.05f));
+
         this.dropSelf(BlockInit.BLUE_GRASS_BLOCK.get());
         this.dropSelf(BlockInit.PURP_DIRT.get());
         this.dropSelf(BlockInit.MOONFLOWER.get());

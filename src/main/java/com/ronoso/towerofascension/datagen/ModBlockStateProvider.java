@@ -14,6 +14,7 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import static net.minecraft.data.models.model.TextureMapping.cubeBottomTop;
@@ -26,19 +27,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        logBlock(BlockInit.MOONGLOW_MAPLE_LOG);
-        simpleBlockWithItem(BlockInit.PURP_DIRT, cubeAll(BlockInit.PURP_DIRT.get()));
+        // Moonglow Maple Blocks
+        logBlock((RotatedPillarBlock) BlockInit.MOONGLOW_MAPLE_LOG.get());
+        axisBlock((RotatedPillarBlock) BlockInit.MOONGLOW_MAPLE_WOOD.get(), blockTexture(BlockInit.MOONGLOW_MAPLE_LOG.get()), blockTexture(BlockInit.MOONGLOW_MAPLE_LOG.get()));
+        axisBlock((RotatedPillarBlock) BlockInit.STRIPPED_MOONGLOW_MAPLE_LOG.get(),
+                new ResourceLocation(TowerOfAscension.MODID, "block/stripped_moonglow_maple_log"),
+                new ResourceLocation(TowerOfAscension.MODID, "block/stripped_moonglow_maple_log_top"));
+        axisBlock((RotatedPillarBlock) BlockInit.STRIPPED_MOONGLOW_MAPLE_WOOD.get(),
+                new ResourceLocation(TowerOfAscension.MODID, "block/stripped_moonglow_maple_log"),
+                new ResourceLocation(TowerOfAscension.MODID, "block/stripped_moonglow_maple_log_top"));
         simpleBlockWithItem(BlockInit.MOONGLOW_MAPLE_LEAVES, cubeAll(BlockInit.MOONGLOW_MAPLE_LEAVES.get()));
+        saplingBlock(BlockInit.MOONGLOW_MAPLE_SAPLING);
+
+        // Moonglow Maple Items
+        simpleBlockItem(BlockInit.MOONGLOW_MAPLE_LOG.get(), models().withExistingParent("tower_of_ascension:moonglow_maple_log", "minecraft:block/cube_column"));
+        simpleBlockItem(BlockInit.MOONGLOW_MAPLE_WOOD.get(), models().withExistingParent("tower_of_ascension:moonglow_maple_wood", "minecraft:block/cube_column"));
+        simpleBlockItem(BlockInit.STRIPPED_MOONGLOW_MAPLE_LOG.get(), models().withExistingParent("tower_of_ascension:stripped_moonglow_maple_log", "minecraft:block/cube_column"));
+        simpleBlockItem(BlockInit.STRIPPED_MOONGLOW_MAPLE_WOOD.get(), models().withExistingParent("tower_of_ascension:stripped_moonglow_maple_wood", "minecraft:block/cube_column"));
+
+
+        simpleBlockWithItem(BlockInit.PURP_DIRT, cubeAll(BlockInit.PURP_DIRT.get()));
 
         registerTallFlower(BlockInit.MOONFLOWER, "moonflower_bottom", "moonflower_top");
         cubeBottomTopBlock(BlockInit.BLUE_GRASS_BLOCK, modLoc("block/purp_dirt"), modLoc("block/blue_grass_block_top"), modLoc("block/blue_grass_block_side"));
 
     }
 
-    private void logBlock(RegistryObject<Block> block) {
-        axisBlock((RotatedPillarBlock) block.get(), modLoc("block/" + block.getId().getPath()), modLoc("block/" + block.getId().getPath() + "_top"));
-        simpleBlockItem(block.get(), models().getExistingFile(block.getId()));
-    }
+
 
     // Helper method to create a cube model with different textures for bottom, top, and sides
     private void cubeBottomTopBlock(RegistryObject<Block> block, ResourceLocation bottom, ResourceLocation top, ResourceLocation sides) {
@@ -48,6 +63,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void simpleBlockWithItem(RegistryObject<Block> block, ModelFile model) {
         simpleBlock(block.get(), model);
+        simpleBlockItem(block.get(), models().getExistingFile(block.getId()));
+    }
+
+    private void saplingBlock(RegistryObject<Block> block) {
+        simpleBlock(block.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), blockTexture(block.get())).renderType("cutout"));
         simpleBlockItem(block.get(), models().getExistingFile(block.getId()));
     }
 

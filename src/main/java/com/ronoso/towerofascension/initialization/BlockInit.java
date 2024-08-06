@@ -33,7 +33,13 @@ public class BlockInit {
 
     // Moonglow Maple
     public static final RegistryObject<Block> MOONGLOW_MAPLE_LOG = BLOCKS.register("moonglow_maple_log", MoonglowMapleLog::new);
+    public static final RegistryObject<Block> MOONGLOW_MAPLE_WOOD = BLOCKS.register("moonglow_maple_wood", MoonglowMapleWood::new);
+    public static final RegistryObject<Block> STRIPPED_MOONGLOW_MAPLE_LOG = BLOCKS.register("stripped_moonglow_maple_log", StrippedMoonglowMapleLog::new);
+    public static final RegistryObject<Block> STRIPPED_MOONGLOW_MAPLE_WOOD = BLOCKS.register("stripped_moonglow_maple_wood", StrippedMoonglowMapleWood::new);
+
+    public static final RegistryObject<Block> MOONGLOW_MAPLE_PLANKS = BLOCKS.register("moonglow_maple_planks", MoonglowMaplePlanks::new);
     public static final RegistryObject<Block> MOONGLOW_MAPLE_LEAVES = BLOCKS.register("moonglow_maple_leaves", MoonglowMapleLeaves::new);
+    public static final RegistryObject<Block> MOONGLOW_MAPLE_SAPLING = BLOCKS.register("moonglow_maple_sapling", MoonglowMapleSapling::new);
 
     @SubscribeEvent
     public static void onRegisterItems(final RegisterEvent event) {

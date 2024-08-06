@@ -3,16 +3,13 @@ package com.ronoso.towerofascension.blocks.plants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class MoonglowMapleLeaves extends LeavesBlock {
-    public MoonglowMapleLeaves() {
-        super(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
-                .isSuffocating((state, world, pos) -> false)
-                .isViewBlocking((state, world, pos) -> false));
+public class MoonglowMaplePlanks extends Block {
+    public MoonglowMaplePlanks() {
+        super(Properties.copy(Blocks.OAK_PLANKS).strength(5f).requiresCorrectToolForDrops());
     }
 
     @Override
@@ -22,11 +19,11 @@ public class MoonglowMapleLeaves extends LeavesBlock {
 
     @Override
     public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return 30;
+        return 5;
     }
 
     @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return 60;
+        return 20;
     }
 }
